@@ -9,7 +9,7 @@ const API_LIST = {
   INQUIRY: BASE_URL + '/order/inquiry/'
 };
 
-const init = (username, password, cb = () => { }) => {
+const init = (username, password, cb = () => {}) => {
   request.post(
     {
       uri: API_LIST.AUTH,
@@ -26,7 +26,7 @@ const init = (username, password, cb = () => { }) => {
   );
 };
 
-const refresh = (token, refreshToken, cb = () => { }) => {
+const refresh = (token, refreshToken, cb = () => {}) => {
   request.post(
     {
       uri: API_LIST.REFRESH,
@@ -49,7 +49,7 @@ const initOrder = (
   userIdentity,
   merchantOrderId,
   description,
-  cb = () => { }
+  cb = () => {}
 ) => {
   request.post(
     {
@@ -66,7 +66,7 @@ const initOrder = (
   );
 };
 
-const verify = (orderid, token, cb = () => { }) => {
+const verify = (orderid, token, cb = () => {}) => {
   request.post(
     {
       uri: API_LIST.VERIFY + orderid,
@@ -83,7 +83,7 @@ const verify = (orderid, token, cb = () => { }) => {
   );
 };
 
-const inquiry = (orderid, token, cb = () => { }) => {
+const inquiry = (orderid, token, cb = () => {}) => {
   request.post(
     {
       uri: API_LIST.INQUIRY + orderid,
